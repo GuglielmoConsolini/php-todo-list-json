@@ -5,10 +5,48 @@
 }
 
 body{
-    background-color: #222;
-    color: white;
+    background-color: lightblue;
+    color: red;
+    font-family: Arial, sans-serif;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
 }
 
 li{
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: white;
+}
+
+li:hover {
+    background: gray;
+}
+
+.complete-button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.complete-button:hover {
+    background: #218838;
 }

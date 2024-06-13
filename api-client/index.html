@@ -11,15 +11,13 @@
 <body>
     
   <div id="app">
-
     <h1>Todos</h1>
-
     <ul>
-      <li v-for="todo in todos">{{ todo.task }}</li>
+        <li v-for="todo in todos" :key="todo.task" :class="{ completed: todo.completed }">
+            {{ todo.task }}
+            <button v-if="!todo.completed" class="complete-button" @click="markAsCompleted(todo)">Completa</button>
+        </li>
     </ul>
-
-
-
   </div>
 
 

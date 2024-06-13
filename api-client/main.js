@@ -7,7 +7,9 @@ createApp({
     }
   },
   methods: {
-
+    markAsCompleted(todo) {
+      todo.completed = true;
+    }
   },
   mounted() {
     console.log("Recupero i dati dal server");
