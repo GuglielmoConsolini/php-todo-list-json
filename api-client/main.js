@@ -4,9 +4,9 @@ createApp({
   data() {
     return {
         todos: [],
-        newTask: "",
+        newTaskName: "",
         //Dati per le richieste
-        apiUrl: "../list.php",
+        apiUrl: "../create.php",
         postRequestConfig: {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -17,6 +17,20 @@ createApp({
   methods: {
     markAsCompleted(todo) {
       todo.completed = true;
+    },
+
+    addTask() {
+      console.log("aggiungi task", this.newTask);
+
+      const newTask = {
+        task: this.newTaskName,
+        completed: false
+      };
+
+      axios.post(this.apiUrl, newTask, this.postRequestConfig).then(results => {
+        console.log("Risultati: ", results.data);
+        this.todos = results.data;
+      });
     }
   },
   mounted() {

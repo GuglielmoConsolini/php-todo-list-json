@@ -18,6 +18,9 @@
             <button v-if="!todo.completed" class="complete-button" @click="markAsCompleted(todo)">Completa</button>
         </li>
     </ul>
+
+    <input placeholder="Nuova mansione" v-model="newTaskName" />
+    <button v-if="newTaskName.length >= 3" @click="addTask">Aggiungi</button>
   </div>
 
 
