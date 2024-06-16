@@ -1,0 +1,18 @@
+[
+    {
+       "task":"Compra il latte",
+       "completed":false
+    },
+    {
+       "task":"Porta fuori il cane",
+       "completed":true
+    },
+    {
+       "task":"Paga le bollette",
+       "completed":false
+    },
+    {
+       "task":"Studia PHP",
+       "completed":true
+    }
+ ]
